@@ -1,0 +1,14 @@
+#????
+server:
+  servlet:
+    context-path: /yuxin
+  port: 9000
+
+#spring??
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yuxin?characterEncoding=utf-8
+    username: root
+    password: 123456
+

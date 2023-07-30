@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yuxin</groupId>
+    <artifactId>yuxin</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <!-- 全局属性 -->
+    <properties>
+        <yuxin.version>1.0.0</yuxin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven-jar-plugin.version>2.6.5</maven-jar-plugin.version>
+        <spring.version>2.7.14</spring.version>
+        <mybatis.version>3.4.3</mybatis.version>
+        <mysql-connector.version>8.0.29</mysql-connector.version>
+    </properties>
+    <!-- 依赖版本声明 -->
+    <dependencyManagement>
+        <dependencies>
+            <!-- Spring web核心包 -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- Mybatis Plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+
+            <!--Mysql数据库驱动-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector.version}</version>
+            </dependency>
+
+            <!-- 内部模块声明 -->
+            <dependency>
+                <groupId>com.yuxin</groupId>
+                <artifactId>yuxin-api</artifactId>
+                <version>${yuxin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yuxin</groupId>
+                <artifactId>yuxin-common</artifactId>
+                <version>${yuxin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yuxin</groupId>
+                <artifactId>yuxin-framework</artifactId>
+                <version>${yuxin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yuxin</groupId>
+                <artifactId>yuxin-bll</artifactId>
+                <version>${yuxin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yuxin</groupId>
+                <artifactId>yuxin-dao</artifactId>
+                <version>${yuxin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.yuxin</groupId>
+                <artifactId>yuxin-model</artifactId>
+                <version>${yuxin.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <modules>
+        <module>yuxin-api</module>
+        <module>yuxin-common</module>
+        <module>yuxin-framework</module>
+        <module>yuxin-bll</module>
+        <module>yuxin-dao</module>
+        <module>yuxin-model</module>
+    </modules>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${maven-jar-plugin.version}</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
