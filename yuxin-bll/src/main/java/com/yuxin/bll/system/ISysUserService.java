@@ -1,6 +1,6 @@
 package com.yuxin.bll.system;
 
-import com.yuxin.model.system.SysUser;
+import com.yuxin.model.entity.system.SysUser;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.yuxin.model.system;
+package com.yuxin.model;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;

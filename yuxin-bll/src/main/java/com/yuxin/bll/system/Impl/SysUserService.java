@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.yuxin.bll.system.ISysUserService;
 import com.yuxin.dao.system.SysUserMapper;
-import com.yuxin.model.system.SysUser;
+import com.yuxin.model.entity.system.SysUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

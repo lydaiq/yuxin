@@ -9,7 +9,7 @@ import lombok.Data;
  * @author <a href="https://github.com/lydaiq">lydaiq</a>
  **/
 @Data
-public class ApiResultVO<T> {
+public class AjaxResultVO<T> {
 
     /**
      * 返回状态
@@ -38,8 +38,8 @@ public class ApiResultVO<T> {
      *
      * @return com.yuxin.common.entity.vo.ApiResultVO<T>
      **/
-    public static <T> ApiResultVO<T> success() {
-        ApiResultVO<T> result = new ApiResultVO<T>();
+    public static <T> AjaxResultVO<T> success() {
+        AjaxResultVO<T> result = new AjaxResultVO<T>();
         result.setSuccess(Boolean.TRUE);
         result.setData(null);
         return result;
@@ -52,8 +52,8 @@ public class ApiResultVO<T> {
      * @param data 实体
      * @return com.yuxin.common.entity.vo.ApiResultVO<T>
      **/
-    public static <T> ApiResultVO<T> success(T data) {
-        ApiResultVO<T> result = new ApiResultVO<T>();
+    public static <T> AjaxResultVO<T> success(T data) {
+        AjaxResultVO<T> result = new AjaxResultVO<T>();
         result.setSuccess(Boolean.TRUE);
         result.setData(data);
         return result;
@@ -67,8 +67,8 @@ public class ApiResultVO<T> {
      * @param msg 错误消息
      * @return com.yuxin.common.entity.vo.ApiResultVO<T>
      **/
-    public static <T> ApiResultVO<T> fail(Integer code, String msg) {
-        ApiResultVO<T> result = new ApiResultVO<T>();
+    public static <T> AjaxResultVO<T> fail(Integer code, String msg) {
+        AjaxResultVO<T> result = new AjaxResultVO<T>();
         result.setSuccess(Boolean.FALSE);
         result.setErrCode(code);
         result.setErrMsg(msg);
@@ -82,8 +82,8 @@ public class ApiResultVO<T> {
      * @param errorEnum 枚举类型
      * @return com.yuxin.common.entity.vo.ApiResultVO<T>
      **/
-    public static <T> ApiResultVO<T> fail(ErrorEnum errorEnum) {
-        ApiResultVO<T> result = new ApiResultVO<T>();
+    public static <T> AjaxResultVO<T> fail(ErrorEnum errorEnum) {
+        AjaxResultVO<T> result = new AjaxResultVO<T>();
         result.setSuccess(Boolean.FALSE);
         result.setErrCode(errorEnum.getErrorCode());
         result.setErrMsg(errorEnum.getErrorMsg());
