@@ -1,19 +1,26 @@
 package com.yuxin.model.system;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * 系统用户实体类
+ * @date 2023-07-30 14:22
+ * @author <a href="https://github.com/lydaiq">lydaiq</a>
+ **/
 @Data
 @TableName("sys_user")
 public class SysUser extends BaseModel{
     /**
      * 编号
      */
-    @TableField("id")
-    private String id;
+    @TableId(value="id",type= IdType.AUTO)
+    private Integer id;
 
     /**
      * 用户编号

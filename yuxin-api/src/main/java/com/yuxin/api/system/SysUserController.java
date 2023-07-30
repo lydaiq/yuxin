@@ -10,6 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+
+/**
+ * 系统用户接口
+ * @date 2023-07-30 14:22
+ * @author <a href="https://github.com/lydaiq">lydaiq</a>
+ **/
 @RestController
 @RequestMapping("/sysUser")
 public class SysUserController {
@@ -17,6 +23,13 @@ public class SysUserController {
     @Autowired
     private ISysUserService sysUserService;
 
+    /**
+     * 获取用户列表
+     * @date 2023-07-30 14:21
+     * @author lydaiq
+     * @param sysUser
+     * @return com.yuxin.common.entity.vo.ApiResultVO
+     **/
     @GetMapping("/list")
     private ApiResultVO getList(SysUser sysUser){
         List<SysUser> list = sysUserService.getList(sysUser);
